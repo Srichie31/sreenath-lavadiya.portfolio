@@ -1,0 +1,24 @@
+.title {
+  h1 {
+    font-family: arsenal;
+    color: #ffffff;
+  }
+  h3 {
+    color: #ffffff9f;
+  }
+}
+
+.footer {
+  a {
+    pointer-events: all;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+svg path {
+  fill: rgb(255, 255, 255);
+}
+
+.page {
+  height: 95vh;
+}
