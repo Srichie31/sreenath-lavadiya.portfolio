@@ -1,11 +1,37 @@
+@import "@tomtom-international/web-sdk-maps";
+
+.body {
+  height: calc(100vh - 40px);
+}
+.row {
+  pointer-events: all;
+}
+#map {
+  height: 100%;
+  pointer-events: all;
+}
+
 h1 {
   pointer-events: none;
 }
 
-* {
-  color: white;
-}
+
 
 .title {
   font-family: "arsenal";
+  color: white;
+}
+
+a {
+  .display-4 {
+    color: white;
+  }
+  h2 {
+    margin-bottom: 0;
+    color: white;
+  }
+}
+
+#form {
+  color: black;
 }
