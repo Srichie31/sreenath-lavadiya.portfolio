@@ -32,6 +32,8 @@ const routes: Routes = [
     pathMatch : "full"
   }
 ];
+// data : {animation : 'Home'}
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

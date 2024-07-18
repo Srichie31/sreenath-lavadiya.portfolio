@@ -32,21 +32,21 @@ export class ContactComponent implements OnInit {
     linkedIn: faLinkedin,
   };
   ngOnInit(): void {
-    const map = tt.map({
-      key: 'RX9bBILnKFxeOhR8qruAdRXSaTYUSEix',
-      container: 'map',
-      center: [77.647701, 12.841785],
-      zoom: 14,
-      style:
-        'https://api.tomtom.com/style/1/style/20.4.5-*/?map=basic_night&poi=poi_main',
-    });
-    map.addControl(new tt.FullscreenControl());
-    map.addControl(new tt.NavigationControl());
-    createMarker([77.647701, 12.841785]);
-    function createMarker(position: any) {
-      // add marker to map
-      new tt.Marker().setLngLat(position).addTo(map);
-    }
+    // const map = tt.map({
+    //   key: 'RX9bBILnKFxeOhR8qruAdRXSaTYUSEix',
+    //   container: 'map',
+    //   center: [77.647701, 12.841785],
+    //   zoom: 14,
+    //   style:
+    //     'https://api.tomtom.com/style/1/style/20.4.5-*/?map=basic_night&poi=poi_main',
+    // });
+    // map.addControl(new tt.FullscreenControl());
+    // map.addControl(new tt.NavigationControl());
+    // createMarker([77.647701, 12.841785]);
+    // function createMarker(position: any) {
+    //   // add marker to map
+    //   new tt.Marker().setLngLat(position).addTo(map);
+    // }
   }
 
   phone = faPhone;

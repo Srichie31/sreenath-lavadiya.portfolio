@@ -12,6 +12,7 @@ import { WorkComponent } from './work/work.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CursorComponent } from './cursor/cursor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     WorkComponent,
     ContactComponent,
+    CursorComponent,
   ],
   imports: [
     BrowserModule,

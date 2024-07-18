@@ -1,11 +1,8 @@
-<div class="container-fluid row position-relative body ms-0 me-3 ps-0">
-  <div class="col-sm-6 ps-3 pb-3 pe-4 ">
-    <!-- <h1 class="display-4 title text-start">LET'S CONNECT</h1> -->
-    <div id="map" class="rounded"></div>
-  </div>
-
-  <div class="col-sm-6 mb-1 rounded d-flex flex-column">
-    <h1 class="display-1 title text-center mb-0">LET'S CONNECT</h1>
+<div
+  class="d-flex justify-content-center align-items-between body ms-0 me-0 ps-0"
+>
+  <div class="col-sm-7 mb-1 d-flex flex-column child">
+    <h1 class="display-3 title text-center mb-0 mt-3">LET'S CONNECT</h1>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="row g-3 mt-0">
         <div class="col">
@@ -68,24 +65,24 @@
         role="button"
         href="https://www.facebook.com/sreenath.lavadiya.17/"
         class="btn btn-lg py-0"
-        ><h2><fa-icon [icon]="logos.fb"></fa-icon></h2
+        ><h3><fa-icon [icon]="logos.fb"></fa-icon></h3
       ></a>
       <a role="button" href="https://x.com/sreenath_17" class="btn btn-lg"
-        ><h2><fa-icon [icon]="logos.twitter"></fa-icon></h2
+        ><h3><fa-icon [icon]="logos.twitter"></fa-icon></h3
       ></a>
       <a
         role="button"
         href="https://www.linkedin.com/in/sreenath-l-3731b4219"
         class="btn btn-lg"
-        ><h2>
-          <fa-icon [icon]="logos.linkedIn"></fa-icon></h2
+        ><h3>
+          <fa-icon [icon]="logos.linkedIn"></fa-icon></h3
       ></a>
       <a
         role="button"
         href="https://www.instagram.com/srichie_17/"
         class="btn btn-lg"
-        ><h2>
-          <fa-icon [icon]="logos.instagram"></fa-icon></h2
+        ><h3>
+          <fa-icon [icon]="logos.instagram"></fa-icon></h3
       ></a>
     </div>
   </div>

@@ -1,20 +1,18 @@
-@import "@tomtom-international/web-sdk-maps";
+// @import "@tomtom-international/web-sdk-maps";
 
 .body {
   height: calc(100vh - 40px);
-}
-.row {
-  pointer-events: all;
-}
-#map {
-  height: 100%;
-  pointer-events: all;
-}
-
-h1 {
   pointer-events: none;
+  position: absolute;
+  width: 100%;
 }
 
+
+
+
+// .child{
+//   pointer-events: all;
+// }
 
 
 .title {
@@ -23,10 +21,11 @@ h1 {
 }
 
 a {
+  pointer-events: all;
   .display-4 {
     color: white;
   }
-  h2 {
+  h3 {
     margin-bottom: 0;
     color: white;
   }
@@ -34,4 +33,7 @@ a {
 
 #form {
   color: black;
+}
+form{
+  pointer-events: all;
 }

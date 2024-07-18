@@ -1,17 +1,20 @@
-* {
-  color: white;
-  
-}
-
 
 .row{
     height: calc(100vh - 40px);
+    color: white;
     pointer-events: none;
 }
 
 .astro {
   height: 70vh;
   animation: float 6s ease-in-out infinite;
+}
+h5{
+  line-height: 1.6;
+}
+
+.canvas{
+  pointer-events: none;
 }
 
 @keyframes float {

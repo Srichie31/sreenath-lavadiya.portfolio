@@ -7,6 +7,7 @@ import { FilmPass } from 'three/addons/postprocessing/FilmPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
+import { slideInAnimation } from '../services/route-animation';
 let selectedTab: any;
 let container: any;
 let renderer: any;
@@ -15,6 +16,7 @@ let renderer: any;
   selector: 'app-routing-module',
   templateUrl: './routing-module.component.html',
   styleUrl: './routing-module.component.scss',
+  animations : [slideInAnimation]
 })
 export class RoutingModuleComponent implements OnInit {
   constructor(private router: Router) {
@@ -33,20 +35,15 @@ export class RoutingModuleComponent implements OnInit {
 
   ngOnInit(): void {
     const radius = 6371;
-
     let SCREEN_HEIGHT = window.innerHeight;
     let SCREEN_WIDTH = window.innerWidth;
-
     let camera: any;
     let controls: FlyControls;
     let scene;
     let dirLight;
-
     let composer: EffectComposer;
-
     let d;
     let dPlanet;
-
     const clock = new THREE.Clock();
 
     init();

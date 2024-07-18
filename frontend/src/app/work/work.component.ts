@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './work.component.scss'
 })
 export class WorkComponent {
+  openProject(link:any){
+    window.location.href = link
+  }
 
 }
+
+
