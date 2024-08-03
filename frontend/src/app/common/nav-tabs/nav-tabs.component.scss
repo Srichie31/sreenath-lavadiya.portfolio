@@ -16,3 +16,34 @@ a {
 .bar {
   background: black;
 }
+
+p {
+  display: inline-block;
+  position: relative;
+}
+
+p::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+p:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+a:hover{
+  color: white !important;
+  
+}
+.active{
+  color: white !important;
+  font-weight:bold;
+}
