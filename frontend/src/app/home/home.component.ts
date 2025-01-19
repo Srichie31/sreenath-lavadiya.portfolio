@@ -11,6 +11,8 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import * as anime from 'animejs';
+import { ResponsiveService } from './../services/responsive.service';
+
 
 @Component({
   selector: 'app-home',
@@ -26,7 +28,15 @@ export class HomeComponent implements OnInit {
     twitter: faXTwitter,
     linkedIn: faLinkedin,
   };
-  constructor() {}
+  isMobile: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(private responsiveService: ResponsiveService) {}
+
+  ngOnInit(): void {
+    
+
+    this.responsiveService.isMobile().subscribe(isMobile => {
+      this.isMobile = isMobile;
+    });
+  }
 }

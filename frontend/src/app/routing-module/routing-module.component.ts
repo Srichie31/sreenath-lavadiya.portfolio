@@ -8,6 +8,8 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 import { slideInAnimation } from '../services/route-animation';
+import { ResponsiveService } from './../services/responsive.service';
+
 let selectedTab: any;
 let container: any;
 let renderer: any;
@@ -19,7 +21,11 @@ let renderer: any;
   animations : [slideInAnimation]
 })
 export class RoutingModuleComponent implements OnInit {
-  constructor(private router: Router) {
+  isMobile: boolean = false;
+
+  constructor(private router: Router,private responsiveService: ResponsiveService) {
+
+
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -34,6 +40,9 @@ export class RoutingModuleComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.responsiveService.isMobile().subscribe(isMobile => {
+      this.isMobile = isMobile;
+    });
     const radius = 6371;
     let SCREEN_HEIGHT = window.innerHeight;
     let SCREEN_WIDTH = window.innerWidth;

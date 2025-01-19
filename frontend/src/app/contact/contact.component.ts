@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ResponsiveService } from './../services/responsive.service';
+
 import { faEnvelope, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
 import tt from '@tomtom-international/web-sdk-maps';
 import {
@@ -16,7 +18,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   encapsulation: ViewEncapsulation.None,
 })
 export class ContactComponent implements OnInit {
-  constructor(private fb: FormBuilder) {
+  isMobile: boolean = false;
+  
+  constructor(private fb: FormBuilder,private responsiveService: ResponsiveService) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -47,6 +51,9 @@ export class ContactComponent implements OnInit {
     //   // add marker to map
     //   new tt.Marker().setLngLat(position).addTo(map);
     // }
+    this.responsiveService.isMobile().subscribe(isMobile => {
+      this.isMobile = isMobile;
+    });
   }
 
   phone = faPhone;

@@ -1,10 +1,10 @@
 <div class="container-fluid text-center">
-  <div class="btn-group w-100" role="group" aria-label="">
+  <div class="btn-group w-100" role="group" aria-label="" [ngClass]="{'btn-group-sm' : isMobile}">
     <button
       type="button"
       (click)="filter('a')"
       class="btn btn-outline-light"
-      [ngClass]="sBtn === 'a' ? 'active' : '' "
+      [ngClass]="sBtn === 'a' ? 'active' : ''"
     >
       All Skills
     </button>
@@ -12,7 +12,7 @@
       type="button"
       (click)="filter('frontend')"
       class="btn btn-outline-light"
-      [ngClass]="sBtn==='frontend'?'active':''"
+      [ngClass]="sBtn === 'frontend' ? 'active' : ''"
     >
       Frontend
     </button>
@@ -20,8 +20,7 @@
       type="button"
       (click)="filter('backend')"
       class="btn btn-outline-light"
-      [ngClass]="sBtn==='backend'?'active':''"
-
+      [ngClass]="sBtn === 'backend' ? 'active' : ''"
     >
       Backend
     </button>
@@ -29,8 +28,7 @@
       type="button"
       (click)="filter('database')"
       class="btn btn-outline-light"
-      [ngClass]="sBtn==='database'?'active':''"
-
+      [ngClass]="sBtn === 'database' ? 'active' : ''"
     >
       Database
     </button>
@@ -38,8 +36,7 @@
       type="button"
       (click)="filter('tools')"
       class="btn btn-outline-light"
-      [ngClass]="sBtn==='tools'?'active':''"
-
+      [ngClass]="sBtn === 'tools' ? 'active' : ''"
     >
       Tools & Technologies
     </button>
@@ -51,11 +48,44 @@
   <div
     *ngFor="let obj of allSkills"
     class="card border-light py-2 m-1 my-2"
-    style="width: 14rem"
+    [ngStyle]="{ width: isMobile ? '11rem' : '13.5rem' }"
   >
-    <div class="card-body py-1 text-center">
-      <!-- <p class="text-center mb-1">1</p> -->
-      <div class="row d-flex align-items-center">
+    <div class="card-body text-center d-flex align-items-center ">
+      <h3 class="display-5 text-center mb-0" *ngIf="iconKeys.includes(obj.key)">
+        <fa-icon class="d-flex text-center" [icon]="icons[obj.key]"></fa-icon>
+      </h3>
+      <h3
+        class="display-5 position-relative text-center mb-0"
+        *ngIf="!iconKeys.includes(obj.key)"
+      >
+        <img
+          [src]="'../../assets/images/brands/' + obj.key + '.png'"
+          class="img-fluid"
+          style="object-fit: cover; display: block"
+          [ngStyle]="{ height: isMobile ? '31px' : '43.95px' }"
+          alt=""
+        />
+      </h3>
+      <div class="ms-3 flex-grow-1">
+        <div
+            class="progress"
+            role="progressbar"
+            aria-label="Warning example"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="height: 25%"
+          >
+            <div
+              class="progress-bar text-bg-primary"
+              [ngStyle]="{ width: obj.score + '%' }"
+            >
+              {{ obj.score }}%
+            </div>
+          </div>
+          <h6 class="text-start d-flex mt-2 mb-0 skill">{{ obj.name }}</h6>
+      </div>
+      <!-- <div class="row w-100">
         <div class="col-sm-4 pe-0">
           <h3
             class="display-5 text-center mb-0"
@@ -77,7 +107,7 @@
               alt=""
             />
           </h3>
-        </div>
+        </div> 
         <div class="col my-0 ps-1">
           <div
             class="progress"
@@ -97,7 +127,7 @@
           </div>
           <h6 class="text-start d-flex mt-2 mb-0 skill">{{ obj.name }}</h6>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
