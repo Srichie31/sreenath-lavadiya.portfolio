@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: futura;
+  src: url(assets/fonts/futora/FuturaCyrillicBook.ttf);
+}
+
+// @font-face {
+//     font-family: GrandsLang;
+//     src: url(assets/fonts/GrandSlang-Roman.ttf);
+// }
+
+@font-face {
+  font-family: arsenal;
+  src: url(assets/fonts/Arsenal_SC/ArsenalSC-Bold.ttf);
+}
+
+@font-face {
+  font-family: pacifico;
+  src: url(assets/fonts/Pacifico-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "futura";
+  //cursor : none
+}

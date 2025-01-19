@@ -1,0 +1,12 @@
+<div class="overlay">
+  <app-nav-tabs></app-nav-tabs>
+  <div class="content" [ngStyle]="{'padding-top' : isMobile ? '56px' : '40px' }">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div id="container" class="z-n1"></div>
+<!-- <app-cursor></app-cursor> -->
+<!-- <div [@routeAnimations]="o && o.activatedRouteData 
+      && o.activatedRouteData['animation']">
+    <router-outlet #o="outlet"></router-outlet>
+</div> -->

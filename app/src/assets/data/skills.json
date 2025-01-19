@@ -1,0 +1,135 @@
+[
+  {
+    "key": "python",
+    "name": "Python",
+    "score": 90,
+    "type": "program"
+  },
+  {
+    "key": "java",
+    "name": "Java",
+    "score": 70,
+    "type": "program"
+  },
+  {
+    "key": "js",
+    "name": "JavaScript",
+    "score": 85,
+    "type": "program"
+  },
+  {
+    "key": "ts",
+    "name": "TypeScript",
+    "score": 85,
+    "type": "program"
+  },
+  {
+    "key": "angular",
+    "name": "Angular",
+    "score": 95,
+    "type": "frontend"
+  },
+  {
+    "key": "html",
+    "name": "HTML5",
+    "score": 95,
+    "type": "frontend"
+  },
+  {
+    "key": "css",
+    "name": "CSS3",
+    "score": 90,
+    "type": "frontend"
+  },
+
+  {
+    "key": "sass",
+    "name": "SASS",
+    "score": 90,
+    "type": "frontend"
+  },
+  {
+    "key": "bootstrap",
+    "name": "Bootstrap",
+    "score": 100,
+    "type": "frontend"
+  },
+  {
+    "key": "three",
+    "name": "Three.JS",
+    "score": 80,
+    "type": "frontend"
+  },
+  {
+    "key": "node",
+    "name": "Node.js",
+    "score": 85,
+    "type": "backend"
+  },
+  {
+    "key": "restApi",
+    "name": "Restful APIs",
+    "score": 95,
+    "type": "backend"
+  },
+  {
+    "key": "anylogic",
+    "name": "AnyLogic",
+    "score": 95,
+    "type": "tools"
+  },
+  {
+    "key": "blender",
+    "name": "Blender",
+    "score": 70,
+    "type": "tools"
+  },
+  {
+    "key": "aws",
+    "name": "AWS",
+    "score": 60,
+    "type": "tools"
+  },
+  {
+    "key": "android",
+    "name": "Android Studio",
+    "score": 65,
+    "type": "tools"
+  },
+  {
+    "key": "git",
+    "name": "GitHub",
+    "score": 80,
+    "type": "tools"
+  },
+  {
+    "key": "vscode",
+    "name": "VS Code",
+    "score": 90,
+    "type": "tools"
+  },
+  {
+    "key": "photoshop",
+    "name": "Photoshop",
+    "score": 70,
+    "type": "tools"
+  },
+  {
+    "key": "lightroom",
+    "name": "Lightroom",
+    "score": 80,
+    "type": "tools"
+  },
+  {
+    "key": "mongodb",
+    "name": "MongoDB",
+    "score": 80,
+    "type": "database"
+  },
+  {
+    "key": "sql",
+    "name": "SQL",
+    "score": 85,
+    "type": "database"
+  }
+]
