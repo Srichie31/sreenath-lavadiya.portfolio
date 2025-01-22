@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CursorComponent } from './cursor/cursor.component';
+import { LoaderComponent } from './loader/loader.component';
 @NgModule({
   declarations: [
     AboutComponent,
@@ -23,7 +24,8 @@ import { CursorComponent } from './cursor/cursor.component';
     SkillsComponent,
     WorkComponent,
     ContactComponent,
-    CursorComponent  ],
+    CursorComponent,
+    LoaderComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

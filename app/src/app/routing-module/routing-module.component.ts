@@ -5,10 +5,11 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { FilmPass } from 'three/addons/postprocessing/FilmPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 import { filter } from 'rxjs';
 import { slideInAnimation } from '../services/route-animation';
 import { ResponsiveService } from './../services/responsive.service';
+import { LoaderService } from './../services/loader.service';
 
 let selectedTab: any;
 let container: any;
@@ -24,7 +25,7 @@ let renderer: any;
 export class RoutingModuleComponent implements OnInit {
   isMobile: boolean = false;
 
-  constructor(private router: Router,private responsiveService: ResponsiveService) {
+  constructor(private router: Router,private responsiveService: ResponsiveService,private loaderService: LoaderService) {
 
 
     this.router.events
@@ -41,6 +42,16 @@ export class RoutingModuleComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.loaderService.show();
+      }
+
+      if (event instanceof NavigationEnd || event instanceof NavigationError) {
+        this.loaderService.hide();
+      }
+    });
+  
     this.responsiveService.isMobile().subscribe(isMobile => {
       this.isMobile = isMobile;
     });
