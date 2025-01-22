@@ -1,13 +1,13 @@
 <div class="container-fluid canvas">
   <div class="row" [ngStyle]="{height : isMobile ? 'calc(100vh - 56px)' : 'calc(100vh - 40px)'}">
-    <div *ngIf="!isMobile" class="col-sm-4 d-flex justify-content-center align-items-center">
+    <div *ngIf="!isMobile" class="col-md-4 d-flex justify-content-center align-items-center">
       <img
         src="../../assets/images/astro.png"
         class="img-thumbnail bg-transparent border-0 astro"
         alt=""
       />
     </div>
-    <div class="col-sm-8 d-flex justify-content-center align-items-center" [ngClass]="{'pe-5': !isMobile}">
+    <div class="col-md-8 d-flex justify-content-center align-items-center" [ngClass]="{'pe-5': !isMobile}">
       <div class="container" [ngClass]="{'text-start': !isMobile,'text-center': isMobile}">
         <h1 class="display-4 fw-bold">Hi there, I'm Sreenath</h1>
         <h5>
