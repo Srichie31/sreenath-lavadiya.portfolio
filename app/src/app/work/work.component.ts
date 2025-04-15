@@ -1,5 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { ResponsiveService } from './../services/responsive.service';
+import projects from '../../assets/data/projects.json'
+
 
 
 @Component({
@@ -10,10 +12,13 @@ import { ResponsiveService } from './../services/responsive.service';
 })
 export class WorkComponent implements OnInit {
   isMobile: boolean = false;
+  projects:any = projects
 
   constructor(private responsiveService: ResponsiveService) {}
 
   ngOnInit(): void {
+    console.log(projects);
+    
     this.responsiveService.isMobile().subscribe(isMobile => {
       this.isMobile = isMobile;
     });

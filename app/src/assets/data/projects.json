@@ -1,0 +1,20 @@
+[
+    {
+        "name": "AlgoSort Studio",
+        "type": "Web Development, Sorting Algorithms",
+        "link": "https://algosort-studio.vercel.app/",
+        "path": "algo-sort.png"
+    },
+    {
+        "name": "Green Oasis",
+        "type": "Web Development",
+        "link": "https://greenoasis1731.web.app/#",
+        "path": "greenOasis/go-wb.png"
+    },
+    {
+        "name": "Portfolio",
+        "type": "Web Development",
+        "link": "#",
+        "path": "portfolio/pf-wb.png"
+    }
+]
