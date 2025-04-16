@@ -1,6 +1,5 @@
-<div
-  class="container-fluid d-flex position-absolute top-0 align-items-center justify-content-center page"
->
+<div class="container-fluid d-flex position-absolute top-0 align-items-center justify-content-center page">
+  <!-- Desktop View -->
   <div class="container-fluid text-center title" *ngIf="!isMobile">
     <h1 class="display-1">Sreenath Lavadiya</h1>
     <div class="d-flex justify-content-center">
@@ -9,50 +8,37 @@
       <h3 class="px-2">Technical Lead</h3>
     </div>
   </div>
+
+  <!-- Mobile View -->
   <div class="container-fluid text-center title" *ngIf="isMobile">
     <h1 class="display-1 name">Sreenath Lavadiya</h1>
     <div class="d-flex justify-content-center">
-      <h3 class="px-2">Software Developer.</h3>
+      <h3 class="px-2">Software Developer</h3>
     </div>
   </div>
 </div>
-<div
-  class="container-fluid position-absolute bottom-0 text-center footer"
-  [ngClass]="{ 'mb-2': isMobile }"
->
+
+<!-- Footer Section -->
+<div class="container-fluid position-absolute bottom-0 text-center footer" [ngClass]="{ 'mb-2': isMobile }">
   <div class="d-flex justify-content-center">
-    <a
-      role="button"
-      href="https://www.facebook.com/sreenath.lavadiya.17/"
-      class="btn btn-lg"
-      ><fa-icon
-        [ngClass]="{ 'display-6': isMobile }"
-        [icon]="logos.fb"
-      ></fa-icon
-    ></a>
-    <a role="button" href="https://x.com/sreenath_17" class="btn btn-lg"
-      ><fa-icon
-        [ngClass]="{ 'display-6': isMobile }"
-        [icon]="logos.twitter"
-      ></fa-icon
-    ></a>
-    <a
-      role="button"
-      href="https://www.linkedin.com/in/sreenath-l-3731b4219"
-      class="btn btn-lg"
-      ><fa-icon
-        [ngClass]="{ 'display-6': isMobile }"
-        [icon]="logos.linkedIn"
-      ></fa-icon
-    ></a>
-    <a
-      role="button"
-      href="https://www.instagram.com/srichie_17/"
-      class="btn btn-lg"
-      ><fa-icon
-        [ngClass]="{ 'display-6': isMobile }"
-        [icon]="logos.instagram"
-      ></fa-icon
-    ></a>
+    <!-- Facebook -->
+    <a role="button" href="https://www.facebook.com/sreenath.lavadiya.17/" class="btn btn-lg">
+      <fa-icon [ngClass]="{ 'display-6': isMobile }" [icon]="logos.fb"></fa-icon>
+    </a>
+
+    <!-- Twitter -->
+    <a role="button" href="https://x.com/sreenath_17" class="btn btn-lg">
+      <fa-icon [ngClass]="{ 'display-6': isMobile }" [icon]="logos.twitter"></fa-icon>
+    </a>
+
+    <!-- LinkedIn -->
+    <a role="button" href="https://www.linkedin.com/in/sreenath-l-3731b4219" class="btn btn-lg">
+      <fa-icon [ngClass]="{ 'display-6': isMobile }" [icon]="logos.linkedIn"></fa-icon>
+    </a>
+
+    <!-- Instagram -->
+    <a role="button" href="https://www.instagram.com/srichie_17/" class="btn btn-lg">
+      <fa-icon [ngClass]="{ 'display-6': isMobile }" [icon]="logos.instagram"></fa-icon>
+    </a>
   </div>
 </div>

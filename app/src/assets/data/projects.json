@@ -6,6 +6,12 @@
         "path": "algo-sort.png"
     },
     {
+        "name": "Sudoku Mania",
+        "type": "Web Development, Data Structures",
+        "link": "https://sudoko-by-srichie.vercel.app/",
+        "path": "sudoku.png"
+    },
+    {
         "name": "Green Oasis",
         "type": "Web Development",
         "link": "https://greenoasis1731.web.app/#",
