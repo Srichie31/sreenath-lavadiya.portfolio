@@ -36,21 +36,6 @@ export class ContactComponent implements OnInit {
     linkedIn: faLinkedin,
   };
   ngOnInit(): void {
-    // const map = tt.map({
-    //   key: 'RX9bBILnKFxeOhR8qruAdRXSaTYUSEix',
-    //   container: 'map',
-    //   center: [77.647701, 12.841785],
-    //   zoom: 14,
-    //   style:
-    //     'https://api.tomtom.com/style/1/style/20.4.5-*/?map=basic_night&poi=poi_main',
-    // });
-    // map.addControl(new tt.FullscreenControl());
-    // map.addControl(new tt.NavigationControl());
-    // createMarker([77.647701, 12.841785]);
-    // function createMarker(position: any) {
-    //   // add marker to map
-    //   new tt.Marker().setLngLat(position).addTo(map);
-    // }
     this.responsiveService.isMobile().subscribe(isMobile => {
       this.isMobile = isMobile;
     });
@@ -59,7 +44,6 @@ export class ContactComponent implements OnInit {
   phone = faPhone;
   mail = faEnvelope;
   send = faPaperPlane
-  // "mailto:email@address.com?subject=Hello world&body=Line one%0DLine two"
   onSubmit() {
     console.log(this.contactForm.value);
     let mailToLink = `mailto:sreenath.ab11@gmail.com?subject=${this.contactForm.value.subject}&body=${this.contactForm.value.body}`

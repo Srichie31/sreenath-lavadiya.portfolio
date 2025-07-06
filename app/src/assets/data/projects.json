@@ -25,13 +25,13 @@
   },
   {
     "name": "Sudoku Mania",
-    "type": "Interactive Puzzle Game with Data Structure Logic",
+    "type": "Interactive Puzzle Game",
     "link": "https://sudoko-by-srichie.vercel.app/",
     "path": "sudoku.png"
   },
   {
     "name": "Green Oasis",
-    "type": "Sustainability-Focused Web Platform",
+    "type": "Online Grocery Store",
     "link": "https://greenoasis1731.web.app/#",
     "path": "go-wb.png"
   }

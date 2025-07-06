@@ -1,7 +1,7 @@
 <div class="d-flex flex-column align-items-center justify-content-between h-100">
   <div></div>
   <div class="container-fluid text-center title">
-    <h1 class="display-1">Sreenath Lavadiya</h1>
+    <h1 [ngStyle]="{'font-size' : isMobile ? '4rem' : '6rem'}">Sreenath Lavadiya</h1>
     <div class="d-flex justify-content-center">
       <h3 class="px-2">Software Developer</h3>
       <h3 class="px-2" *ngIf="!isMobile">|</h3>
