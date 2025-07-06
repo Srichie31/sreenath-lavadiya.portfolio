@@ -3,6 +3,20 @@ a {
   pointer-events: all;
 }
 
+.mobile-nav p {
+  
+  font-size: 2rem;
+  font-family: 'robert';
+  font-weight: 400;
+  .index {
+    font-size: x-small;
+  }
+  .first {
+    font-family: "harmond";
+    font-stretch: expanded ;
+  }
+}
+
 .logo {
   color: white;
   margin-right: auto;
@@ -100,8 +114,7 @@ ul.menu {
   list-style: none;
 
   li.menu-item {
-    border-bottom: 1px solid #333;
-    margin-top: 5px;
+    margin-top: px;
     transform: scale(1.15);
     a {
       color: #fff;

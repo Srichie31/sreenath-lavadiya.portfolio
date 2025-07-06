@@ -1,7 +1,4 @@
-<div
-  class="container-fluid px-0 bar"
-  style="z-index: 1;"
->
+<div class="container-fluid px-0 bar" style="z-index: 10">
   <div class="s" style="margin-left: auto">
     <ul class="nav justify-content-end" *ngIf="!isMobile">
       <div class="logo">
@@ -37,7 +34,7 @@
         >
       </li>
     </ul>
-    <ul class="nav justify-content-end" *ngIf="isMobile" >
+    <ul class="nav justify-content-end" *ngIf="isMobile">
       <div class="logo mob">
         <h4 class="px-3 mb-0">sl .</h4>
       </div>
@@ -52,7 +49,11 @@
         </svg>
       </label>
     </ul>
-    <ul class="menu pb-0 pb-4 rounded-bottom  text-center" *ngIf="showDropDown">
+    
+    <ul
+      class="menu mobile-nav pb-0 pb-4 rounded-bottom text-end me-2"
+      *ngIf="showDropDown"
+    >
       <li class="menu-item">
         <a
           class="nav-link"
@@ -60,7 +61,9 @@
           aria-selected="true"
           routerLink="/home"
           (click)="showDropDown = false"
-          ><p class="mb-0">Home</p></a
+          ><p class="mb-0">
+            <span class="index">01.</span><span class="first"> H</span>ome
+          </p></a
         >
       </li>
       <li class="menu-item">
@@ -69,7 +72,9 @@
           routerLinkActive="active"
           routerLink="/about"
           (click)="showDropDown = false"
-          ><p class="mb-0">About</p></a
+          ><p class="mb-0">
+            <span class="index">02.</span><span class="first"> A</span>bout
+          </p></a
         >
       </li>
       <li class="menu-item">
@@ -79,7 +84,9 @@
             routerLinkActive="active"
             routerLink="/skills"
             (click)="showDropDown = false"
-            ><p class="mb-0">Skills</p></a
+            ><p class="mb-0">
+              <span class="index">03.</span><span class="first"> S</span>kills
+            </p></a
           ></a
         >
       </li>
@@ -90,7 +97,9 @@
             routerLinkActive="active"
             routerLink="/work"
             (click)="showDropDown = false"
-            ><p class="mb-0">Work</p></a
+            ><p class="mb-0">
+              <span class="index">04. </span><span class="first"> W</span>orks
+            </p></a
           ></a
         >
       </li>
@@ -101,12 +110,12 @@
             routerLinkActive="active"
             routerLink="/contact"
             (click)="showDropDown = false"
-            ><p class="mb-0">Contact</p></a
+            ><p class="mb-0">
+              <span class="index">05.</span><span class="first"> C</span>ontact
+            </p></a
           ></a
         >
       </li>
     </ul>
   </div>
 </div>
-
-
