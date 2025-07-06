@@ -1,11 +1,17 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as THREE from 'three';
 import { FlyControls } from 'three/addons/controls/FlyControls.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { FilmPass } from 'three/addons/postprocessing/FilmPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import { Router, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import {
+  Router,
+  NavigationStart,
+  NavigationEnd,
+  NavigationError,
+} from '@angular/router';
 import { filter } from 'rxjs';
 import { slideInAnimation } from '../services/route-animation';
 import { ResponsiveService } from './../services/responsive.service';
@@ -20,14 +26,16 @@ let renderer: any;
   templateUrl: './routing-module.component.html',
   styleUrl: './routing-module.component.scss',
   standalone: false,
-  animations : [slideInAnimation]
+  animations: [slideInAnimation],
 })
 export class RoutingModuleComponent implements OnInit {
   isMobile: boolean = false;
 
-  constructor(private router: Router,private responsiveService: ResponsiveService,private loaderService: LoaderService) {
-
-
+  constructor(
+    private router: Router,
+    private responsiveService: ResponsiveService,
+    private loaderService: LoaderService
+  ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -42,7 +50,7 @@ export class RoutingModuleComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.router.events.subscribe(event => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.loaderService.show();
       }
@@ -51,15 +59,15 @@ export class RoutingModuleComponent implements OnInit {
         this.loaderService.hide();
       }
     });
-  
-    this.responsiveService.isMobile().subscribe(isMobile => {
+
+    this.responsiveService.isMobile().subscribe((isMobile) => {
       this.isMobile = isMobile;
     });
     const radius = 6371;
     let SCREEN_HEIGHT = window.innerHeight;
     let SCREEN_WIDTH = window.innerWidth;
     let camera: any;
-    let controls: FlyControls;
+    let controls: any;
     let scene;
     let dirLight;
     let composer: EffectComposer;
@@ -175,18 +183,13 @@ export class RoutingModuleComponent implements OnInit {
       renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
       renderer.setAnimationLoop(animate);
       container.appendChild(renderer.domElement);
-      controls = new FlyControls(camera, renderer.domElement);
-      controls.movementSpeed = 100;
-      controls.domElement = renderer.domElement;
-      controls.rollSpeed = Math.PI / 300;
-      controls.autoForward = false;
-      controls.dragToLook = false;
+      controls = new OrbitControls(camera, renderer.domElement);
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 0.1;
 
-      //
+      controls.domElement = renderer.domElement;
 
       window.addEventListener('resize', onWindowResize);
-
-      // postprocessing
 
       const renderModel = new RenderPass(scene, camera);
       const effectFilm = new FilmPass(0.35);
@@ -212,9 +215,6 @@ export class RoutingModuleComponent implements OnInit {
 
     function animate() {
       const delta = clock.getDelta();
-      dPlanet = camera.position.length();
-      d = dPlanet - radius * 1.01;
-      controls.movementSpeed = 0.33 * d;
       controls.update(delta);
       composer.render(delta);
     }

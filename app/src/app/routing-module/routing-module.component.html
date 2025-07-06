@@ -1,6 +1,9 @@
-<div class="overlay">
+<div class="overlay d-flex" style="height: 100dvh">
   <app-nav-tabs></app-nav-tabs>
-  <div class="content" [ngStyle]="{'padding-top' : isMobile ? '56px' : '40px' }">
+  <div
+    class="content flex-grow-1"
+    [ngStyle]="{ 'padding-top': isMobile ? '56px' : '40px' }"
+  >
     <router-outlet></router-outlet>
   </div>
 </div>

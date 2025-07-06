@@ -1,44 +1,38 @@
 [
-    {
-        "name": "Split Expense",
-        "type": "Web Development",
-        "link": "https://split-expense-by-srichie.vercel.app/",
-        "path": "splitExpense.png"
-    },
-    {
-        "name": "Ask-Srichie",
-        "type": "Web Development, Chatbot",
-        "link": "https://ask-srichie.vercel.app/",
-        "path": "askSrichie.png"
-    },
-    {
-        "name": "Megha-Mitra",
-        "type": "Weather App",
-        "link": "https://weather-app-by-srichie.vercel.app/",
-        "path": "megha-mitra.png"
-    },
-    {
-        "name": "AlgoSort Studio",
-        "type": "Web Development, Sorting Algorithms",
-        "link": "https://algosort-studio.vercel.app/",
-        "path": "algo-sort.png"
-    },
-    {
-        "name": "Sudoku Mania",
-        "type": "Web Development, Data Structures",
-        "link": "https://sudoko-by-srichie.vercel.app/",
-        "path": "sudoku.png"
-    },
-    {
-        "name": "Green Oasis",
-        "type": "Web Development",
-        "link": "https://greenoasis1731.web.app/#",
-        "path": "greenOasis/go-wb.png"
-    },
-    {
-        "name": "Portfolio",
-        "type": "Web Development",
-        "link": "#",
-        "path": "portfolio/pf-wb.png"
-    }
+  {
+    "name": "Split Expense",
+    "type": "Full-Stack Web Application",
+    "link": "https://split-expense-by-srichie.vercel.app/",
+    "path": "splitExpense.png"
+  },
+  {
+    "name": "Ask-Srichie",
+    "type": "AI-Powered Chatbot Web App",
+    "link": "https://ask-srichie.vercel.app/",
+    "path": "askSrichie.png"
+  },
+  {
+    "name": "Megha-Mitra",
+    "type": "Real-Time Weather Forecast App",
+    "link": "https://weather-app-by-srichie.vercel.app/",
+    "path": "megha-mitra.png"
+  },
+  {
+    "name": "AlgoSort Studio",
+    "type": "Algorithm Visualizer for Sorting Techniques",
+    "link": "https://algosort-studio.vercel.app/",
+    "path": "algo-sort.png"
+  },
+  {
+    "name": "Sudoku Mania",
+    "type": "Interactive Puzzle Game with Data Structure Logic",
+    "link": "https://sudoko-by-srichie.vercel.app/",
+    "path": "sudoku.png"
+  },
+  {
+    "name": "Green Oasis",
+    "type": "Sustainability-Focused Web Platform",
+    "link": "https://greenoasis1731.web.app/#",
+    "path": "go-wb.png"
+  }
 ]

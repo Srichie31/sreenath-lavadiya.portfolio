@@ -1,4 +1,6 @@
-<div class="d-flex justify-content-center">
+<div
+  class="d-flex flex-column align-items-center justify-content-between h-100"
+>
   <div class="m-0 col-7" [ngClass]="{ 'col-7': !isMobile, 'col-11': isMobile }">
     <h1 class="display-3 title text-center my-3">LET'S CONNECT</h1>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
@@ -62,30 +64,39 @@
       </div>
     </form>
   </div>
-</div>
-
-<div class="container-fluid position-absolute bottom-0 text-center footer" [ngClass]="{'mb-2':isMobile}" >
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center" [ngClass]="{ 'mb-2': isMobile }">
     <a
       role="button"
       href="https://www.facebook.com/sreenath.lavadiya.17/"
       class="btn btn-lg"
-      ><fa-icon [ngClass]="{'display-6':isMobile}" [icon]="logos.fb"></fa-icon
+      ><fa-icon
+        [ngClass]="{ 'display-6': isMobile }"
+        [icon]="logos.fb"
+      ></fa-icon
     ></a>
     <a role="button" href="https://x.com/sreenath_17" class="btn btn-lg"
-      ><fa-icon [ngClass]="{'display-6':isMobile}" [icon]="logos.twitter"></fa-icon
+      ><fa-icon
+        [ngClass]="{ 'display-6': isMobile }"
+        [icon]="logos.twitter"
+      ></fa-icon
     ></a>
     <a
       role="button"
       href="https://www.linkedin.com/in/sreenath-l-3731b4219"
       class="btn btn-lg"
-      ><fa-icon [ngClass]="{'display-6':isMobile}" [icon]="logos.linkedIn"></fa-icon
+      ><fa-icon
+        [ngClass]="{ 'display-6': isMobile }"
+        [icon]="logos.linkedIn"
+      ></fa-icon
     ></a>
     <a
       role="button"
       href="https://www.instagram.com/srichie_17/"
       class="btn btn-lg"
-      ><fa-icon [ngClass]="{'display-6':isMobile}" [icon]="logos.instagram"></fa-icon
+      ><fa-icon
+        [ngClass]="{ 'display-6': isMobile }"
+        [icon]="logos.instagram"
+      ></fa-icon
     ></a>
   </div>
 </div>
