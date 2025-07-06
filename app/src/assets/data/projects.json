@@ -1,5 +1,23 @@
 [
     {
+        "name": "Split Expense",
+        "type": "Web Development",
+        "link": "https://split-expense-by-srichie.vercel.app/",
+        "path": "splitExpense.png"
+    },
+    {
+        "name": "Ask-Srichie",
+        "type": "Web Development, Chatbot",
+        "link": "https://ask-srichie.vercel.app/",
+        "path": "askSrichie.png"
+    },
+    {
+        "name": "Megha-Mitra",
+        "type": "Weather App",
+        "link": "https://weather-app-by-srichie.vercel.app/",
+        "path": "megha-mitra.png"
+    },
+    {
         "name": "AlgoSort Studio",
         "type": "Web Development, Sorting Algorithms",
         "link": "https://algosort-studio.vercel.app/",
